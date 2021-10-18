@@ -109,8 +109,8 @@ fn demonstrate_natural_sequence(upper_bound: u32) {
             }
 
 
-            cpp_sequence_generating::INIT_INVALID_UPPER_BOUND => {
-                println!("Function InitializeNaturalSequenceParameters() returned exception: INIT_INVALID_UPPER_BOUND.");
+            cpp_sequence_generating::INIT_INVALID_BOUND => {
+                println!("Function InitializeNaturalSequenceParameters() returned exception: INIT_INVALID_BOUND.");
             }
 
             _ => {
@@ -176,7 +176,7 @@ fn demonstrate_fibonacci_sequence(lower_bound: u32, upper_bound: u32) {
             }
 
 
-            cpp_sequence_generating::INIT_INVALID_UPPER_BOUND => {
+            cpp_sequence_generating::INIT_INVALID_BOUND => {
                 println!("Function InitializeFibonacciSequenceParameters() returned exception: INIT_INVALID_UPPER_BOUND.");
             }
 

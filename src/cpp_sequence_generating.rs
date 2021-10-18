@@ -151,7 +151,7 @@ impl GeneratedContainer {
     }
 }
 pub const INIT_SUCCEDED: ::std::os::raw::c_int = 0;
-pub const INIT_INVALID_UPPER_BOUND: ::std::os::raw::c_int = -1;
+pub const INIT_INVALID_BOUND: ::std::os::raw::c_int = -1;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct ParametersContainer {

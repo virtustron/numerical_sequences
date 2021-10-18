@@ -21,7 +21,7 @@ int InitializeFibonacciSequenceParameters(void** parameters_container_to_initial
         if (parameters_container != NULL)
             delete parameters_container;
         
-        return INIT_INVALID_UPPER_BOUND;
+        return INIT_INVALID_BOUND;
 	}
     
     *parameters_container_to_initialize = (void*)parameters_container;

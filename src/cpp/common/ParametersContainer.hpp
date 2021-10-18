@@ -1,7 +1,7 @@
 #pragma once
 
 const int INIT_SUCCEDED                 =  0;
-const int INIT_INVALID_UPPER_BOUND      = -1;
+const int INIT_INVALID_BOUND            = -1;
 
 
 class ParametersContainer
