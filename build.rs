@@ -11,8 +11,12 @@ fn main() {
         "src/cpp/natural_sequence/NaturalSequenceIterator.cpp",     
         "src/cpp/natural_sequence/NaturalSequence.cpp",    
         "src/cpp/natural_sequence/NaturalSequenceGenerating.cpp", 
+        "src/cpp/fibonacci_sequence/FibonacciSequenceIterator.cpp",     
+        "src/cpp/fibonacci_sequence/FibonacciSequence.cpp",    
+        "src/cpp/fibonacci_sequence/FibonacciSequenceGenerating.cpp",
     ];
-    
+
+   
     println!("cargo:rerun-if-changed=src/wrapper.hpp");
 
     cc::Build::new()
@@ -20,6 +24,8 @@ fn main() {
         .files(src.iter())
         //.file("src/mymath.cpp")
         .include("src/cpp/common")
+        .include("src/cpp/natural_sequence")
+        .include("src/cpp/fibonacci_sequence")
         .compile("cpp_sequence_generating");
     
     let bindings = bindgen::Builder::default()

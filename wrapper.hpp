@@ -8,5 +8,7 @@
 */
  
  
- #include "src/cpp/natural_sequence/NaturalSequenceGenerating.hpp" 
- #include "src/cpp/common/GeneratedContainer.hpp"
+#include "src/cpp/natural_sequence/NaturalSequenceGenerating.hpp" 
+#include "src/cpp/fibonacci_sequence/FibonacciSequenceGenerating.hpp" 
+#include "src/cpp/common/GeneratedContainer.hpp"
+#include "src/cpp/common/ParametersContainer.hpp"

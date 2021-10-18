@@ -1,5 +1,10 @@
 #pragma once
 
+const int GENERATING_SUCCEDED                 =  0;
+const int GENERATING_FAILED                   = -1;
+const int GENERATING_PARAMETERS_ARE_NOT_VALID  = -2;
+
+
 class GeneratedContainer
 {
 public:
