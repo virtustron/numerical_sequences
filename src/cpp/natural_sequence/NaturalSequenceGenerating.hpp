@@ -9,6 +9,6 @@ const int GENERATING_PARAMETERS_ARE_NOT_VALID  = -2;
 
 
 
-int InitializeNaturalSequenceParameters(void** parameters_container_to_initialize);
+int InitializeNaturalSequenceParameters(void** parameters_container_to_initialize, unsigned int upper_bound);
 
 int GenerateNaturalSequence(void* parameters_container, void **generated_sequence_container);

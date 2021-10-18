@@ -7,14 +7,14 @@
 #include "NaturalSequenceGeneratedContainer.hpp"
 
 
-int InitializeNaturalSequenceParameters(void** parameters_container_to_initialize)
+int InitializeNaturalSequenceParameters(void** parameters_container_to_initialize, unsigned int upper_bound)
 {
     // TODO try smart poriners
-    NaturalSequenceParametersContainer* parameters_container;
+    NaturalSequenceParametersContainer* parameters_container = NULL;
     
     try
     {
-        parameters_container = new NaturalSequenceParametersContainer(100);
+        parameters_container = new NaturalSequenceParametersContainer(upper_bound);
     }
     catch (const std::invalid_argument& e)
 	{

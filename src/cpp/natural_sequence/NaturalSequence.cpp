@@ -35,6 +35,6 @@ NaturalSequenceIterator NaturalSequence::end()
 
 bool NaturalSequence::IsNaturalBoundValid(unsigned int bound)
 {
-    return (bound >= 0);
+    return (bound > 0); 
 }
 
