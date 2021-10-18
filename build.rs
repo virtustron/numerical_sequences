@@ -6,10 +6,10 @@ extern crate bindgen;
 fn main() {
     
     let src = [
+        "src/cpp/common/ParametersContainer.cpp", 
+        "src/cpp/common/GeneratedContainer.cpp",
         "src/cpp/natural_sequence/NaturalSequenceIterator.cpp",     
         "src/cpp/natural_sequence/NaturalSequence.cpp",    
-        "src/cpp/natural_sequence/NaturalSequenceParametersContainer.cpp", 
-        "src/cpp/natural_sequence/NaturalSequenceGeneratedContainer.cpp", 
         "src/cpp/natural_sequence/NaturalSequenceGenerating.cpp", 
     ];
     
@@ -19,6 +19,7 @@ fn main() {
         .cpp(true)    
         .files(src.iter())
         //.file("src/mymath.cpp")
+        .include("src/cpp/common")
         .compile("cpp_sequence_generating");
     
     let bindings = bindgen::Builder::default()

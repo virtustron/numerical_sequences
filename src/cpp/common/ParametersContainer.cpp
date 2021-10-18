@@ -1,4 +1,4 @@
-#include "NaturalSequenceParametersContainer.hpp"
+#include "ParametersContainer.hpp"
 
     ParametersContainer::ParametersContainer()
     {

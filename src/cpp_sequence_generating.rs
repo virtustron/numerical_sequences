@@ -21,100 +21,89 @@ extern "C" {
 }
 #[repr(C)]
 #[derive(Debug)]
-pub struct NaturalSequenceGeneratedContainer {
-    pub m_elements_count: ::std::os::raw::c_uint,
+pub struct GeneratedContainer {
+    pub m_elements_count: ::std::os::raw::c_int,
     pub m_elements: *mut ::std::os::raw::c_uint,
 }
 #[test]
-fn bindgen_test_layout_NaturalSequenceGeneratedContainer() {
+fn bindgen_test_layout_GeneratedContainer() {
     assert_eq!(
-        ::std::mem::size_of::<NaturalSequenceGeneratedContainer>(),
+        ::std::mem::size_of::<GeneratedContainer>(),
         16usize,
-        concat!("Size of: ", stringify!(NaturalSequenceGeneratedContainer))
+        concat!("Size of: ", stringify!(GeneratedContainer))
     );
     assert_eq!(
-        ::std::mem::align_of::<NaturalSequenceGeneratedContainer>(),
+        ::std::mem::align_of::<GeneratedContainer>(),
         8usize,
-        concat!(
-            "Alignment of ",
-            stringify!(NaturalSequenceGeneratedContainer)
-        )
+        concat!("Alignment of ", stringify!(GeneratedContainer))
     );
     assert_eq!(
         unsafe {
-            &(*(::std::ptr::null::<NaturalSequenceGeneratedContainer>())).m_elements_count
-                as *const _ as usize
+            &(*(::std::ptr::null::<GeneratedContainer>())).m_elements_count as *const _ as usize
         },
         0usize,
         concat!(
             "Offset of field: ",
-            stringify!(NaturalSequenceGeneratedContainer),
+            stringify!(GeneratedContainer),
             "::",
             stringify!(m_elements_count)
         )
     );
     assert_eq!(
-        unsafe {
-            &(*(::std::ptr::null::<NaturalSequenceGeneratedContainer>())).m_elements as *const _
-                as usize
-        },
+        unsafe { &(*(::std::ptr::null::<GeneratedContainer>())).m_elements as *const _ as usize },
         8usize,
         concat!(
             "Offset of field: ",
-            stringify!(NaturalSequenceGeneratedContainer),
+            stringify!(GeneratedContainer),
             "::",
             stringify!(m_elements)
         )
     );
 }
 extern "C" {
-    #[link_name = "\u{1}_ZN33NaturalSequenceGeneratedContainer18get_elements_countEv"]
-    pub fn NaturalSequenceGeneratedContainer_get_elements_count(
-        this: *mut NaturalSequenceGeneratedContainer,
-    ) -> ::std::os::raw::c_uint;
+    #[link_name = "\u{1}_ZN18GeneratedContainer18get_elements_countEv"]
+    pub fn GeneratedContainer_get_elements_count(
+        this: *mut GeneratedContainer,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    #[link_name = "\u{1}_ZN33NaturalSequenceGeneratedContainer12get_elementsEv"]
-    pub fn NaturalSequenceGeneratedContainer_get_elements(
-        this: *mut NaturalSequenceGeneratedContainer,
+    #[link_name = "\u{1}_ZN18GeneratedContainer12get_elementsEv"]
+    pub fn GeneratedContainer_get_elements(
+        this: *mut GeneratedContainer,
     ) -> *mut ::std::os::raw::c_uint;
 }
 extern "C" {
-    #[link_name = "\u{1}_ZN33NaturalSequenceGeneratedContainer12set_elementsEPji"]
-    pub fn NaturalSequenceGeneratedContainer_set_elements(
-        this: *mut NaturalSequenceGeneratedContainer,
+    #[link_name = "\u{1}_ZN18GeneratedContainer12set_elementsEPji"]
+    pub fn GeneratedContainer_set_elements(
+        this: *mut GeneratedContainer,
         elements: *mut ::std::os::raw::c_uint,
         elements_count: ::std::os::raw::c_int,
     );
 }
 extern "C" {
-    #[link_name = "\u{1}_ZN33NaturalSequenceGeneratedContainerC1Ev"]
-    pub fn NaturalSequenceGeneratedContainer_NaturalSequenceGeneratedContainer(
-        this: *mut NaturalSequenceGeneratedContainer,
-    );
+    #[link_name = "\u{1}_ZN18GeneratedContainerC1Ev"]
+    pub fn GeneratedContainer_GeneratedContainer(this: *mut GeneratedContainer);
 }
 extern "C" {
-    #[link_name = "\u{1}_ZN33NaturalSequenceGeneratedContainerC1EPji"]
-    pub fn NaturalSequenceGeneratedContainer_NaturalSequenceGeneratedContainer1(
-        this: *mut NaturalSequenceGeneratedContainer,
+    #[link_name = "\u{1}_ZN18GeneratedContainerC1EPji"]
+    pub fn GeneratedContainer_GeneratedContainer1(
+        this: *mut GeneratedContainer,
         elements: *mut ::std::os::raw::c_uint,
         elements_count: ::std::os::raw::c_int,
     );
 }
 extern "C" {
-    #[link_name = "\u{1}_ZN33NaturalSequenceGeneratedContainerD1Ev"]
-    pub fn NaturalSequenceGeneratedContainer_NaturalSequenceGeneratedContainer_destructor(
-        this: *mut NaturalSequenceGeneratedContainer,
-    );
+    #[link_name = "\u{1}_ZN18GeneratedContainerD1Ev"]
+    pub fn GeneratedContainer_GeneratedContainer_destructor(this: *mut GeneratedContainer);
 }
-impl NaturalSequenceGeneratedContainer {
+impl GeneratedContainer {
     #[inline]
-    pub unsafe fn get_elements_count(&mut self) -> ::std::os::raw::c_uint {
-        NaturalSequenceGeneratedContainer_get_elements_count(self)
+    pub unsafe fn get_elements_count(&mut self) -> ::std::os::raw::c_int {
+        GeneratedContainer_get_elements_count(self)
     }
     #[inline]
     pub unsafe fn get_elements(&mut self) -> *mut ::std::os::raw::c_uint {
-        NaturalSequenceGeneratedContainer_get_elements(self)
+        GeneratedContainer_get_elements(self)
     }
     #[inline]
     pub unsafe fn set_elements(
@@ -122,14 +111,12 @@ impl NaturalSequenceGeneratedContainer {
         elements: *mut ::std::os::raw::c_uint,
         elements_count: ::std::os::raw::c_int,
     ) {
-        NaturalSequenceGeneratedContainer_set_elements(self, elements, elements_count)
+        GeneratedContainer_set_elements(self, elements, elements_count)
     }
     #[inline]
     pub unsafe fn new() -> Self {
         let mut __bindgen_tmp = ::std::mem::MaybeUninit::uninit();
-        NaturalSequenceGeneratedContainer_NaturalSequenceGeneratedContainer(
-            __bindgen_tmp.as_mut_ptr(),
-        );
+        GeneratedContainer_GeneratedContainer(__bindgen_tmp.as_mut_ptr());
         __bindgen_tmp.assume_init()
     }
     #[inline]
@@ -138,7 +125,7 @@ impl NaturalSequenceGeneratedContainer {
         elements_count: ::std::os::raw::c_int,
     ) -> Self {
         let mut __bindgen_tmp = ::std::mem::MaybeUninit::uninit();
-        NaturalSequenceGeneratedContainer_NaturalSequenceGeneratedContainer1(
+        GeneratedContainer_GeneratedContainer1(
             __bindgen_tmp.as_mut_ptr(),
             elements,
             elements_count,
@@ -147,6 +134,6 @@ impl NaturalSequenceGeneratedContainer {
     }
     #[inline]
     pub unsafe fn destruct(&mut self) {
-        NaturalSequenceGeneratedContainer_NaturalSequenceGeneratedContainer_destructor(self)
+        GeneratedContainer_GeneratedContainer_destructor(self)
     }
 }

@@ -45,12 +45,12 @@ fn main() {
 
                 match  generating_result {
                     cpp_sequence_generating::GENERATING_SUCCEDED => {
-                        let sequence_container: *mut cpp_sequence_generating::NaturalSequenceGeneratedContainer;
-                        sequence_container = generated_sequence_container as *mut cpp_sequence_generating::NaturalSequenceGeneratedContainer;
+                        let sequence_container: *mut cpp_sequence_generating::GeneratedContainer;
+                        sequence_container = generated_sequence_container as *mut cpp_sequence_generating::GeneratedContainer;
 
-                        let elements_count = cpp_sequence_generating::NaturalSequenceGeneratedContainer_get_elements_count(sequence_container);
+                        let elements_count = cpp_sequence_generating::GeneratedContainer_get_elements_count(sequence_container);
                         let elements: *mut ::std::os::raw::c_uint;
-                        elements = cpp_sequence_generating::NaturalSequenceGeneratedContainer_get_elements(sequence_container);  
+                        elements = cpp_sequence_generating::GeneratedContainer_get_elements(sequence_container);  
 
                         let elements_slice = std::slice::from_raw_parts(elements, elements_count as usize);
 

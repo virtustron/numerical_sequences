@@ -9,4 +9,4 @@
  
  
  #include "src/cpp/natural_sequence/NaturalSequenceGenerating.hpp" 
- #include "src/cpp/natural_sequence/NaturalSequenceGeneratedContainer.hpp"
+ #include "src/cpp/common/GeneratedContainer.hpp"
