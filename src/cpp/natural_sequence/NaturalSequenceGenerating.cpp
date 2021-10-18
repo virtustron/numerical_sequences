@@ -58,6 +58,8 @@ int GenerateNaturalSequence(void* parameters_container, void **generated_sequenc
         sequence_container = new NaturalSequenceGeneratedContainer(elements, elements_count);
 
         *generated_sequence_container = (void*)sequence_container; 
+
+
     }
     catch(const std::exception& e)
     {

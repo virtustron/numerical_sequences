@@ -22,7 +22,7 @@ extern "C" {
 #[repr(C)]
 #[derive(Debug)]
 pub struct NaturalSequenceGeneratedContainer {
-    pub m_elements_count: ::std::os::raw::c_int,
+    pub m_elements_count: ::std::os::raw::c_uint,
     pub m_elements: *mut ::std::os::raw::c_uint,
 }
 #[test]
@@ -71,7 +71,7 @@ extern "C" {
     #[link_name = "\u{1}_ZN33NaturalSequenceGeneratedContainer18get_elements_countEv"]
     pub fn NaturalSequenceGeneratedContainer_get_elements_count(
         this: *mut NaturalSequenceGeneratedContainer,
-    ) -> ::std::os::raw::c_int;
+    ) -> ::std::os::raw::c_uint;
 }
 extern "C" {
     #[link_name = "\u{1}_ZN33NaturalSequenceGeneratedContainer12get_elementsEv"]
@@ -109,7 +109,7 @@ extern "C" {
 }
 impl NaturalSequenceGeneratedContainer {
     #[inline]
-    pub unsafe fn get_elements_count(&mut self) -> ::std::os::raw::c_int {
+    pub unsafe fn get_elements_count(&mut self) -> ::std::os::raw::c_uint {
         NaturalSequenceGeneratedContainer_get_elements_count(self)
     }
     #[inline]

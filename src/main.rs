@@ -3,6 +3,7 @@ use std::ptr;
 mod cpp_sequence_generating;
 
 fn main() {
+    
     let command_line_arguments: Vec<String> = std::env::args().collect();
     let mut is_arguments_valid: bool = true;
 
@@ -44,17 +45,28 @@ fn main() {
 
                 match  generating_result {
                     cpp_sequence_generating::GENERATING_SUCCEDED => {
-                        //let mut sequence_container: cpp_sequence_generating::NaturalSequenceGeneratedContainer;
-                        //sequence_container = generated_sequence_container as cpp_sequence_generating::NaturalSequenceGeneratedContainer;
-                        
+                        let sequence_container: *mut cpp_sequence_generating::NaturalSequenceGeneratedContainer;
+                        sequence_container = generated_sequence_container as *mut cpp_sequence_generating::NaturalSequenceGeneratedContainer;
+
+                        let elements_count = cpp_sequence_generating::NaturalSequenceGeneratedContainer_get_elements_count(sequence_container);
+                        let elements: *mut ::std::os::raw::c_uint;
+                        elements = cpp_sequence_generating::NaturalSequenceGeneratedContainer_get_elements(sequence_container);  
+
+                        let elements_slice = std::slice::from_raw_parts(elements, elements_count as usize);
+
+                        for &element in elements_slice {
+                            print!("{}, ", element);
+
+                        }  
+                        println!("\n");                      
                     }
 
                     cpp_sequence_generating::GENERATING_PARAMETERS_ARE_NOT_VALID => {
-                        println!("Function GenerateNaturalSequence() returned exception: COMPARATION_CONTAINER_IS_NULL.");
+                        println!("Function GenerateNaturalSequence() returned exception: GENERATING_PARAMETERS_ARE_NOT_VALID.");
                     }
 
                     cpp_sequence_generating::GENERATING_FAILED => {
-                        println!("Function GenerateNaturalSequence() returned exception: COMPARATION_FAILED.");
+                        println!("Function GenerateNaturalSequence() returned exception: GENERATING_FAILED.");
                     }
 
                     _ => {
@@ -73,6 +85,6 @@ fn main() {
             }
         }
     }
-
+    
     
 }

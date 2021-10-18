@@ -15,7 +15,7 @@ NaturalSequenceGeneratedContainer::~NaturalSequenceGeneratedContainer()
     
 }
 
-int NaturalSequenceGeneratedContainer::get_elements_count()
+unsigned int NaturalSequenceGeneratedContainer::get_elements_count()
 {
     return m_elements_count;   
 }
