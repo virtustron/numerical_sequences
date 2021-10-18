@@ -44,8 +44,8 @@ fn main() {
 
                 match  generating_result {
                     cpp_sequence_generating::GENERATING_SUCCEDED => {
-                        let mut sequence_container: cpp_sequence_generating::NaturalSequenceGeneratedContainer;
-                        sequence_container = generated_sequence_container as cpp_sequence_generating::NaturalSequenceGeneratedContainer;
+                        //let mut sequence_container: cpp_sequence_generating::NaturalSequenceGeneratedContainer;
+                        //sequence_container = generated_sequence_container as cpp_sequence_generating::NaturalSequenceGeneratedContainer;
                         
                     }
 
